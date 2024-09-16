@@ -1,0 +1,9 @@
+Reading Reflection Week02
+Article: Five Important Considerations for Wireframing
+
+I thought that the advice laid out by the article were a great reminder of approaching not just UI, but to any design as well.
+Personally, there are many times where I have personally started enthusiatically working on a new project without clearly thinking about the hows and whys.
+Like the article advised and through classes like EG-1001 and Ideation and Prototyping, I've found the importance of getting to know the audience in order to plan ahead for my solution.
+I was able to do just this on a project I did last summer with a few friends of mine where I did interviews with different communities of people for the app we built at a Hackathon.
+
+Additionally, the article discusses making wireframes for prototyping purposes and for getting feedback. Although we learned a little about how to do brainstorm maps last year, I want to learn more about how to create wireframes quicker and more effectively. Omnigraffle is mentioned as a program for creating wireframes so I want to give that a try sometime.

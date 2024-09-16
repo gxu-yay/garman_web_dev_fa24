@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--this specifies the character set encoding, without this tag, our fonts might not load properly-->
+    <meta charset="utf-8"/>
+    <!--the viewport tag sets the initial scale and ensures proper responsive behavior-->
+    <meta name="viewport" content="width=device-width", initial-scale>
+    <title>HTML Elements 101</title>
+
+    <!-- This is how we make an internal stylesheet -->
+     <style>
+      body{
+        background-color: grey;
+      }
+
+       h2,h3,h4 {
+        background-color:#00FF99;
+       }
+
+       a{
+        color: rgb(150,150,0);
+        background-color: rbga(255,50,50,0.5);
+       }
+     </style>
+
+  </head>
+  <body>
+    text without markup still shows up
+    <h1 id = "top">Heading 1 is the most important text on the page</h1>
+    <h2>Heading 2, as the numbers get bigger the text gets smaller, so does its weight</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+
+    <p>
+      <strong>Body paragraph Body paragraph</strong> Body paragraph Body paragraph Body <br>paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph <em>Body paragraph Body paragraph Body paragraph Body paragraph</em> <strong>Body paragraph Body paragraphBody paragraph Body paragraph</strong>
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+    </p>
+    <p>
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph <span style="color: red; display: block" >Body paragraph Body paragraph Body paragraph Body paragraph</span>Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph <div>Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph</div> Body paragraph Body paragraphBody paragraph Body paragraph
+      Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraphBody paragraph Body paragraph
+    </p>
+
+    <h2>Buttermilk Pancakes</h2>
+    <p>These are the best!</p>
+    <!-- images phosted on other websites, you can just paste the address-->
+    <img src="https://tornadoughalli.com/wp-content/uploads/2021/12/BUTTERMILK-PANCAKE-RECIPE-3-1.jpg" alt="Pancakes" width="100px" height="300px">
+    <!-- local image same folder -->
+     <img src="pancake.jpg">
+     <!-- image in subfolder, not at the same level of folders of the code file -->
+      <img src="InClassExcercises/pancake.jpg">
+
+    <hr>
+
+    <!-- # as dummy link -->
+     <a href="#">Dummy Link using #</a>
+     <a href="about/index.html">About</a>
+     <!-- linking to an element of the same page by id -->
+     <a href="#top">Back to top</a>
+
+     <hr>
+
+     <!-- unordered list, order doesnt matter -->
+      <ul>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+          <ol>
+            <li>thing inside another thing</li>
+            <li>thing inside another thing</li>
+          </ol>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+      </ul>
+
+      <!-- Sometimes order matters so use an ordered list -->
+
+      <ol>
+        <li>Ingredient1</li>
+        <li>Ingredient2</li>
+        <li>Ingredient3</li>
+        <li>Ingredient4</li>
+        <li>Ingredient5</li>
+      </ol>
+  </body>
+</html>
