@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro CSS</title>
+
+  <!-- internal style sheet -->
+   <style type="text/CSS">
+    /* universal selector is commonly used to zero out the browser default margins and padding */
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /* tag selevtors aka type or element selectors apply to every instance of that tag on the page */
+    div{
+      background-color: fuchsia;
+      font-family: fantasy;
+    }
+
+    p{
+      /* 1 rem = 16px */
+      margin-top: 1rem;
+      border: 1px solid red;
+      /* first value top bottom 2nd left right */
+      padding: 2rem 1rem;
+      /* applied top left bottom left */
+      border-width: 1px 5px 10px 20px;
+
+      color: #195d23;
+      /* order of preferred fonts in case one doesnt work */
+      /* font-family: Helvetia, Arial, sans -serif; */
+    }
+
+    a{
+      color: #000;
+      text-decoration: none;
+      font-weight: 100;
+    }
+
+      /* This is a psuedo element selector, this more specifc than a tag this one applies 
+      to on links that hae been visited by your browser */
+
+    a:visited{
+      color: red;
+    }
+
+    /* class seletors always start with . inside our style sheet */
+    .silly_text{
+      font-family: cursive;
+      text-decoration: underline wavy;
+      color: cornflowerblue;
+    }
+
+    #really_important{
+      font-weight: 600;
+      font-size: x-large;
+      font-style: oblique;
+      line-height: 50px;
+      text-transform: uppercase;
+    }
+    
+   </style>
+
+</head>
+<body>
+  <div class="silly_text">Testing 123</div>
+  <p>A p tag to add <a href="#">Some Space</a></p>
+  <p id="really_important">
+    asdfklsldkflsakfjlksajflksjflksjlfksjlfkskaflksjflksjaflaksjflskajfdsalfksldakfjslakfjlsadkjflskajfsf
+    salfdkjsaldkfjlskajflskdjfalksjdflksjflaksdjflkjalkfjsfa <span style="color: purple;">
+    sdfklsldkflsakfjlksajflksjflksjlfksjlfkskaflksjflksjaflaksjflskajfdsalfksldakfjslakfjlsadkjflskajfsf
+    salfdkjsaldkfjlskajflskdjfalksjdflksjflaksdjflkjalkfjsfasdfklsldkflsakfjlksajflksjflksjlfksjlfkskaflksjflksjaflaksjflskajfdsalfksldakfjslakfjlsadkjflskajfsf</span>
+    salfdkjsaldkfjlskajflskdjfalksjdflksjflaksdjflkjalkfjsfa
+  </p>
+  <div>Another div</div>
+</body>
+</html>
