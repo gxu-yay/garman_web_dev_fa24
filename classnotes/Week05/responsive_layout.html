@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive 101</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    function toggleMenu(){
+      document.getElementBy('mainNav').classList.toggle('show')
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="brand"><a href="#">Logo</a></h1>
+    <!-- hide on desktop, show on mobile -->
+    <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+    <nav id="mainNav">
+      <ul class="menu">
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link2</a></li>
+        <li><a href="#">Link3</a></li>
+        <li><a href="#">Link4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+    <div class="thumb"><img src="./clod.jpg"></div>
+  </main>
+</body>
+</html>
