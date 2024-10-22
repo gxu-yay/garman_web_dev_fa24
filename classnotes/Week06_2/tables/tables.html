@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+
+  <style>
+    table{
+      border-collapse: collapse;
+      width: 300px;
+      text-align: center;
+    }
+
+    th, td{
+      border-bottom: 2px solid gray;
+      width: 33%;
+    }
+
+    td{
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      
+    }
+
+    td:first-child{
+      border-left: none;
+    }
+
+    td:last-child{
+      border-right: none;
+    }
+
+    .last_row td{
+      border-bottom: none;
+    }
+
+    tr:nth-child(even){
+      background-color: aqua;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- wraps all things tabley -->
+   <table>
+      <thead>
+        <tr>
+          <th>Name</th><th>Age</th><th>Major</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>tony</td>
+          <td>54</td>
+          <td>math</td>
+        </tr>
+
+        <tr class="last_row">
+          <td>mary</td>
+          <td>21</td>
+          <td>horse</td>
+        </tr>
+      </tbody>
+   </table>
+</body>
+</html>

@@ -43,10 +43,11 @@ img {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 249px;
+  padding: 0 2rem;
+  position: relative;
   border-bottom: 1px solid #dbdbdb;
 }
 
@@ -102,24 +103,27 @@ header ul.submenu li a {
 }
 
 /* landing page photo */
-.hero_sec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.hero img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 /* cards */
 
 .container {
-  display: grid;
+  display: flex;
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
 }
 
 .card__container {
-  display: grid;
+  display: flex;
   row-gap: 3.5rem;
 }
 
@@ -130,15 +134,15 @@ header ul.submenu li a {
 
 .card__img {
   width: 328px;
-  border-radius: 1.5rem;
+  border: black 10px solid;
 }
 
 .card__data {
+  border: black 5px solid;
   width: 280px;
   background-color: var(--container-color);
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
-  border-radius: 1rem;
   position: absolute;
   bottom: -9rem;
   left: 0;
@@ -295,6 +299,8 @@ header ul.submenu li a {
 
 .text-box {
   color: black;
+  border: black 5px solid;
+  height: 200px;
 }
 
 .text-box h2 {
@@ -317,4 +323,48 @@ header ul.submenu li a {
 
 .list__button:hover {
   text-decoration: underline;
+}
+
+
+.container_test{
+  width: 85%;
+  margin: 0px auto;
+  padding: 50px;
+}
+
+.card_container_test{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card_test{
+  background-color: white;
+  border: black 5px solid;
+  width: 400px;
+  height: 800px;
+}
+
+.card_test img{
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.card_test h2{
+  padding: 20px;
+  font-size: 28px;
+}
+
+.card_test p{
+  padding: 20px;
+  font-size: 16px;
+}
+
+.card_test a{
+  padding: 20px;
+  font-size: 16px;
 }
