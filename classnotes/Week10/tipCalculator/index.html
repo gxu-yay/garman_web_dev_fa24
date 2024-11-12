@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Input Simple</title>
+
+  <style type="text/css">
+    h1 {
+      text-transform: uppercase;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .purple {
+      color: purple;
+    }
+  </style>
+  <script>
+    //write a function that chnages the color of the h1 element based on the number a user enters
+    //wait for DOM to load before trying to getanyting by ID
+    //add additional event listeners
+
+    document.addEventListener('DOMContentLoaded', function({
+      //assign html to variables
+      //add event listeners to HTML elements
+      const myBtn = document.getElementById('changeBtn')
+      myBtn.addEventListener('click', pickAClass)
+    })
+
+    function pickAClass() {
+      //grab our user number input
+      const userN = document.getElementByID('num')
+      console.log(typeof userN.value)
+      // we don;t want a string, we want an integer
+      const n = parseInt(userN.value)
+      console.log(typeof n)
+
+      //grab our h1 element and store it a var, 
+      const h = document.getElementByID('changeMe'
+
+      //rather than haing a laundry list of conditional statemets, let's use a switch
+      switch(n){
+      case  0:
+          break
+      case 1:
+          break
+        case 3:
+          break
+        default:arguments/
+        t
+
+          //this is where you put one of t
+      }
+      )
+    }
+  </script>
+</head>
+<body>
+  <h1 id="changeMe">Get User Input Simple</h1>
+
+  <form>
+    <fieldset>
+      <legend>Pick a number between 0 and 3</legend>
+      <label for="num">0-3</label>
+      <input 
+        type="number" 
+        name="num" 
+        id="num" 
+        min="0" 
+        max="3" 
+        step="1" 
+        placeholder="1"
+        >
+        <button type="button" id="changeBtn" class="btnClass">
+          Click to change the color class of h1
+        </button>
+    </fieldset>
+  </form>
+</body>
+</html>

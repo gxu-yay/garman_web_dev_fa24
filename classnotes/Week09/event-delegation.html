@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation</title>
+
+  <style>
+    img {
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active{
+      color: red;
+      text-shadow: 2,2,2,2 rgba(0,0,0,0.4);
+    }
+  </style>
+
+  <script>
+    //globally declare our hidebtn
+    let hidebtn
+
+    // wait for the DOM contnet to load before executing certain lines of code
+    document.addEventListener('DOMContentLoaded', function(event){
+      //assign html elements to js variables
+      hidebtn = document.getElementById('hidebtn')
+      // assign other event listeners
+      hidebtn.addEventListener('click', toggleVisible)
+
+      // chaining methods
+      document.getElementById('eventH1').addEventListener('mouseover', function(event){
+        //peep the event object that got passed to this anonymouse function
+        // console.log(event.target)
+
+        // store the element that recieved the event
+        var element = event.target
+        element.classList.toggle('active')
+      })
+    })
+
+    function toggleVisible(){
+      var peep = document.getElementById('chicken')
+      peep.classList.toggle('hidden')
+    }
+
+    
+  </script>
+</head>
+<body>
+  <h1 id="eventH1">
+    This is here to be moused over so we can see the event object.
+  </h1>
+
+  <button id="'hidebtn">hide</button>
+
+  <img src="https://thumbs.dreamstime.com/z/isolated-white-chicken-shot-studio-316731815.jpg?ct=jpeg" alt="" id="chicken">
+</body>
+</html>

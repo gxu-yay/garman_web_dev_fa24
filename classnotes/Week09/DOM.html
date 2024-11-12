@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic DOM, 2 Ways</title>
+  <style>
+    #content {
+      color: red;
+    }
+
+    @media screen and (max-width: 767px){
+      #content {
+        color: blue;
+      }
+    }
+  </style>
+  <script>
+    const myButton = documnet.getElementById('clickMe')
+
+    myButton.style = "color: blue"
+  </script>
+</head>
+<body>
+  <button onclick="addSingleP" id="clickMe">Add a single P using strings</button>
+  <button onclick="">Add multiple Ps the right way using DOM node</button>
+
+  <div id="content">
+    <p>This is some dummy text that will be overwritten by innerHTML</p>
+
+  <script>
+    // declaring and assigning a global variable
+    const myButton = documnet.getElementById('clickMe')
+    // change style attribute with js
+    myButton.style = 'color: blue;'
+
+    // globally declare our content variable, so that we can access it anywhere within 
+    let conntent
+
+    // we can assign it later on in our code
+    content = documnet.getElementById('content')
+    console.log(content)
+
+    function addSingleP(){
+      // .innerHTML is the html inside the opening tag
+      // this replaces the referenced html with this string
+      // NOT GOOD!
+      content.innerHTML = '<p>This is a poorly instantiated P tag using string trickery! </p>'
+    }
+
+    function addMultiP(num){
+      for (var i = 0; i < num; i++){
+        //create a p element (node)
+        var p = document.createElement('P')
+        // created a text node to go inside
+        var text = document.createTextNode(
+          `This is paragraph number ${i+1}`
+        )
+        //append the text node to the P element
+        p.appendChild(text)
+        // append the P element to my content div
+        content.appendChild(p)
+      }
+    }
+  </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+
+  <script>
+    // decalre a variable called months without assigning it a value or type
+    let months = ['January']
+    console.log(months)
+    console.log(months.length)
+    
+    console.log(typeof months)
+
+    months = ['Jan', 'Feb', 'Mar']
+    console.log(months.length)
+
+    // we can use Array.pop() to remove the last item in our array
+    var lastMonth = monts.pop()
+
+    // what we wanted to add it back to our months array?
+        // .push adds it to the array
+    months.push('Not A REAL Month')
+
+    // // use a loop to list out all of the values in our array
+    // for (var i = 1; i < months.lenght; i += 2){
+    //   console.log(`index number: ${i}. the value is ${monhts[i]}`)
+    // }
+
+    // // loop through an array backwards and delete the last item using .pop()
+    // for(var i = months.length; i > 0; i--){
+    //   var delMonth = months.pop()
+    //   console.log(`Deleted ${delMonth}, the new array length is ${months.length}`)
+    // }
+    // console.log(months)
+
+    // pick a random number between 0 and our months.length and log item at that index
+    var ri = Math.floor(Math.random() * months.length)
+    console.log(months[rn])
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

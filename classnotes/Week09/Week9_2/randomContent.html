@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Contnet (math + arrays)</title>
+  <script type="text/javascript">
+    // make an array of image sources to choose from at random when the page loads
+    var arrImg = [
+      'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg', 'https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg', 'https://www.pawschicago.org/fileadmin/_processed_/8/c/csm_garden1-1024x685_0438a114ad.jpg'
+    ]
+
+    // random links to correspond to each image
+    var arrLinks = [
+      'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg', 'https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg', 'https://www.pawschicago.org/fileadmin/_processed_/8/c/csm_garden1-1024x685_0438a114ad.jpg'
+    ]
+
+    // helper function for pickig a random number between 0 and max
+    function randomIndex(max){
+      return Math.floor(Math.random() * max)
+    }
+
+    // write our own random image function outside of our event listeners
+    // remember not to call this function until the DOM loads
+
+    function loadRandomImage(){
+      var index = randomIndex(arrImg.length)
+      var img = document.getElementById('animal')
+      var link = document.getElementByID('dynLink')
+
+      //assign the src attribute of the image element to a string stored in a random index slot in our image array
+      img.src = arrImg[index]
+      //assign the href from our links array and random index
+      link.href = arrLinks[index]
+    }
+
+    // loadRandomImage()
+    // wait for page to finish loading the body content before we try and store and elements as JS variables
+    // document.addEventListener('DOMContentLoaded', function(){
+    //   //assign elements to variables, 
+    //   //call functions we want to run on load
+    //   //add event listeners to elements like buttons on our page
+    //   loadRandomImage()
+    // })
+
+    document.addEventListener('DOMContentLoaded', loadRandomImage())
+
+
+  </script>
+</head>
+<body>
+  <a href="#" id="dynLink" target="_blank"><img src="" id="animal"></a>
+</body>
+</html>
