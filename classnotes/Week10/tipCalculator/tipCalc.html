@@ -104,9 +104,25 @@
       const p2 = document.createElement('P')
       const p3 = document.createElement('P')
       const p4 = document.createElement('P')
+
+      let t1 = document.createTextNode = (`Bill is $${bill}.`)
+      let t2 = document.createTextNode = (`Tip percentage is ${per * 100}%.`)
+      let t3 = document.createTextNode = (`Calculated tip is $${tip}.`)
+      let t4 = document.createTextNode = (`Total is $${total}.`)
+
+      //add the text nodes to the p tags
+      //append p tages now
+      p1.appendChild(t1)
+      p2.appendChild(t2)
+      p3.appendChild(t3)
+      p4.appendChild(t4)
+      //append thep tags now with th text inside to our tipResult div
+      result.appendChild(p1)
+      result.appendChild(p2)
+      result.appendChild(p3)
+      result.appendChild(p4)
     }
 
-    const t1 = (document.createNexNode = `Bill it $${bill}.`)
     
     function moneyRound(num){
       return Math.ceil(num * 100) / 100

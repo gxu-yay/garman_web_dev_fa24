@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //declare our location element globally so we can access it anywhere 
+
+
+    //content loaded event listener
+    document.addEventListener('DOMContentLoaded', () =>{
+      if(navigator.geolocation && navigator.geolocation.getCurrentPosition){
+        //we check to see if geolocation exists in our browser
+        //if true, we can use it here to get our current location
+        //once we have it, the location object will atuomatically be passed to ca callback fuction
+        navigator.geolocation.getCurrentPosition(setPosition, showError)
+      } else{
+        //we either dont have access to geolocation or the user denied the consent
+        //we need to render an alternative message to the user
+        alert('your browser does not support geolocation')
+      }
+    }
+
+    //once we call getCurrent Position, the result position object is passed into setPositio
+    const getLocation
+
+
+    // **error handling, using switch
+
+    const showError = (error) => {
+      console.log(error)
+      switch (error.code) {
+        case.error.PERISSION_DENIED:
+        loc.innerHTML = 'user denied the request'
+        break
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="location">
+    <p>Currently searching for location...</p>
+  </div>
+</body>
+</html>
