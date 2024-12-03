@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello GSAP Tweens</title>
+
+    <style type="text/css" media="screen"></style>
+  </head>
+  <body>
+    <!-- Load GSAP core library at the bottom of our body tag -->
+    <!--
+      Older free without subscription versions
+      https://github.com/greensock/GSAP
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Our Script using GSAP Library Functions -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script type="text/javascript">
+      const sb = document.querySelector('$sb')
+
+    gsap.to(sb, 2, {
+      x: 1000, //moves to the right
+      y: -700, //moves up 500px
+      rotation: 720,
+      scale: 0.5,
+      delay: 1,
+      ease: 'elastic.out',
+    })
+      
+    //use QuerySelector inline to select all of the images with the class .bball
+    gsap.to('.bbal', 1){
+      y: 500,
+      rotation: 360,
+      delay: 3,
+      ease: 'bounce.out',
+      stagger: {
+        each: .5,
+      })
+
+      function imDone(){
+        alert("I'm done.")
+      }
+
+      gsap.to('#sb, .bball', 5,){
+        opacity: 0
+      }
+    }
+    </script>
+  </body>
+</html>

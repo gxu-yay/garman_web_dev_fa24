@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elevator Scrolling Example</title>
+    <style type="text/css" media="screen">
+      body{
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 40px 0;
+        padding-top: 100px;
+        background-color: black;
+        color: white;
+      }
+
+      #main{
+        margin: 0 auto;
+        width: 800px;
+      }
+
+      section {
+        padding: 20px 0 80px 0;
+        height: 1000px;
+      }
+
+      section h2 {
+        font-size: 48px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 20px;
+      }
+
+      ul {
+        position: fixed;
+        top: 40%;
+        right: 0;
+        list-style-type: none;
+      }
+
+      li {
+        width: 30px;
+        padding: 10px;
+        margin-bottom: 1px;
+        color: #ccc;
+        border-left: 10px solid #333;
+        cursor: pointer;
+        transition: all 1s;
+      }
+
+      .active{
+        color: #FFF;
+        border-left: 20px solid #fff;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- elevator buttons -->
+     <ul>
+      <li id="floor5Btn">5</li>
+      <li id="floor4Btn">4</li>
+      <li id="floor3Btn">3</li>
+      <li id="floor2Btn">2</li>
+      <li id="floor1Btn">1</li>
+     </ul>
+    <!-- floors -->
+     <div id="main">
+      <section id="floor5Panel">
+        <h2>Floor 5</h2>
+      </section>
+
+      <section id="floor4Panel">
+        <h2>Floor 4</h2>
+      </section>
+      
+      <section id="floor3Panel">
+        <h2>Floor 3</h2>
+      </section>
+
+      <section id="floor2Panel">
+        <h2>Floor 2</h2>
+      </section>
+
+      <section id="floor1Panel">
+        <h2>Floor 1</h2>
+      </section>
+     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript">
+        //wait for DOM content to load before we assign elements to variables//
+        document.addEventListener('DOMContentLoaded', () =>{
+          gsap.from('body',5,{opacity: 0})
+          //fade in
+          gsap.from('ul', 1, {right: -500, delay: 0.5})
+
+          //grab each elevator button and store as a seperate variable
+          const floor1Btn = document.getElementById('floor1Btn')
+          const floor2Btn = document.getElementById('floor2Btn')
+          const floor3Btn = document.getElementById('floor3Btn')
+          const floor4Btn = document.getElementById('floor4Btn')
+          const floor5Btn = document.getElementById('floor5Btn')
+
+          //grab our LIs as an array
+          let navButtons = document.getElementById('LI')
+          //not an array but an html collection
+          //cast the collection into an array so we have access to all of the array methpds
+          navButtons = [].slice.call(navButtons)
+
+          //add the active class on mouseEnter
+          navButtons.forEach(button) =>{
+            button.addEventListener('mouseenter', function(){
+              gsap.to(this, {className: 'active', duration: 1})
+            })
+          }
+        })
+     
+    </script>
+  
+    
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Garman's Race</title>
+</head>
+<body>
+  <!--  -->
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <nav><a href="#">Garman</a></nav>
+
+    <!-- HORIZONTAL PAGE 1 -->
+    <section class="panel">
+      <h1>Why Hello There!</h1>
+    </section>
+
+    <!-- HORIZONTAL PAGE 2 -->
+    <section class="panel">
+      <h1>page 2!</h1>
+    </section>
+  </div>
+
+  <!-- VERTICAL PAGE -->
+  <section class="outro">
+    <h1>
+      tis I
+      <br>
+      Garman
+    </h1>
+  </section>
+  <!-- VERTICAL PAGE -->
+  <section class="outro">
+    <h1>
+      vertical page 2
+    </h1>
+    
+  <!-- VERTICAL PAGE -->
+  </section>
+  <section class="outro">
+    <h1>
+      vertical page 3
+    </h1>
+  </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () =>{
+          gsap.from('body',5,{opacity: 0})
+          //fade in
+          gsap.from('nav', 1, {top: -500, delay: 0.5})
+        })
+          
+        // .create creates a single scrolltrigger instance
+        // need to do a whole timeline
+
+        let horizontalSections = gsap.utils.toArray(".container");
+
+        horizontalSections.forEach((container) => {
+        let sections = container.querySelectorAll(".panel");
+
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          scrollTrigger: {
+            trigger: container,
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: "+=900vh"
+          
+          }
+        });
+      })
+
+        // ScrollTrigger.create({
+        //   trigger: ".container",
+        //   start: "top top",
+        //   end: "+=900vh",
+        //   scrub: 1,
+        //   pin: true,
+        //   onUpdate: (self) => {
+        //     gsap.to(".panel", {
+        //       x: `${-350 * self.progress}vw`,
+        //       duration: 0.5,
+        //       ease: "power3.out",
+        //     });
+        //   }
+        // });
+
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.panel{
+  height: 100%;
+  width: 100%;
+}
+
+.red{
+  background-color: orangered;
+}
+
+.orange{
+  background-color: orange;
+}
+
+.purple{
+  background-color: purple;
+}
+
+.green{
+  background-color: green;
+}
+
+.gray{
+  background-color: gray;
+}
+
+.blue{
+  background-color: blue;
+  /* width: 250vw; */
+}

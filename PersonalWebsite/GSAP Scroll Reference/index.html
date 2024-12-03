@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- EVERYTHING IN THE DIV CONTAINER IS TAGGED IN SCROLLTRIGGER FOR HORIZONTAL -->
+  <!-- THE SECTION OUTSIDE OF IT IS NORMAL VERTICAL SCROLL -->
+
+  <!-- HORIZONTAL -->
+  <div class="container">
+    <section class="description panel blue"></section>
+    <section class="panel red">
+      ONE
+    </section>
+    <section class="panel orange">
+      TWO
+    </section>
+    <section class="panel purple">
+      THREE
+    </section>
+    <section class="panel green">
+      FOUR
+    </section>
+    <section class="panel gray">
+      FIVE
+    </section>
+  </div>
+
+  <!-- VERTICAL -->
+  <section class="panel red">
+      vertical
+    </section>
+    <section class="panel orange">
+      vertical
+    </section>
+    <section class="panel purple">
+      vertical
+    </section>
+    <section class="panel green">
+      vertical
+    </section>
+  
+  <!-- HORIZONTAL AGAIN -->
+  <div class="container">
+    <section class="panel red">
+      ONE
+    </section>
+    <section class="panel orange">
+      TWO
+    </section>
+    <section class="panel purple">
+      THREE
+    </section>
+    <section class="panel green">
+      FOUR
+    </section>
+    <section class="panel gray">
+      FIVE
+    </section>
+  
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.umd.min.js"></script>
+
+  <script>
+    //GSAP ANIMATION CODE HERE
+    let horizontalSections = gsap.utils.toArray(".container");
+
+    // FOR EACH IN CONTAINER FOR HORIZONTAL CALL HERE
+    horizontalSections.forEach((container) => {
+    let sections = container.querySelectorAll(".panel");
+
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          pin: true,
+          scrub: 1,
+          // base vertical scrolling on how wide the container is so it feels more natural.
+          end: "+=3500",
+        }
+      });
+      })
+
+  </script>
+
+</body>
+</html>
